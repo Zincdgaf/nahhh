@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #7b2cbf, #240046);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yesBtn {
+  background: #ff5fd8;
+  color: white;
+}
+
+#noBtn {
+  background: #ffb703;
+  color: black;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Envelope */
+.envelope {
+  width: 320px;
+  height: 220px;
+  background: #9d4edd;
+  border-radius: 10px;
+  position: relative;
+  animation: pop 0.5s ease;
+}
+
+.envelope-top {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #c77dff;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+.letter {
+  position: absolute;
+  inset: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.letter p {
+  font-size: 1.1rem;
+  color: #5a189a;
+  margin-bottom: 15px;
+}
+
+#nextBtn {
+  background: #7b2cbf;
+  color: white;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
